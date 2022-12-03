@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  TOKEN = "12345"
+  
   
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    TOKEN = Autorization.last
     render json: @post
   end
 

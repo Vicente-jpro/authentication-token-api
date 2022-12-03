@@ -10,16 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_02_234403) do
-  create_table "auth_tokens", force: :cascade do |t|
-    t.string "password_token"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
+ActiveRecord::Schema[7.0].define(version: 2022_12_03_004337) do
+  create_table "autorizations", force: :cascade do |t|
+    t.integer "token_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
