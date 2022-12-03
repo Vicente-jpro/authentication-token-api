@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   
-  
+  #Get token from database
+  TOKEN = Autorization.last.token_key
+
   include ActionController::HttpAuthentication::Token::ControllerMethods
 
   before_action :set_post, only: %i[ show update destroy ]
@@ -15,7 +17,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    TOKEN = Autorization.last
+    
+    #TOKEN = Autorization.last.token_key
     render json: @post
   end
 

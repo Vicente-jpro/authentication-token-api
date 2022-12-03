@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "18d903eb-4f50-449b-9976-489aee3ac335",
+		"name": "authentication-token-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15022755"
+	},
+	"item": [
+		{
+			"name": "autorizations#generate_token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 12345",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/autorizations/generate_token",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"autorizations",
+						"generate_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts#show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 9656",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/posts/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

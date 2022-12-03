@@ -1,2 +1,0 @@
-class AuthToken < ApplicationRecord
-end
